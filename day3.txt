@@ -1,0 +1,406 @@
+1.switch statyement
+#include<stdio.h>
+
+
+int main()
+ {
+  
+ char ch;
+
+      scanf("%c",&ch);
+   
+switch(ch)
+
+   {
+    
+  case 'a':printf("The alphabet is a");
+   
+          break;
+       
+ case 'b':printf("The alphabet is b");
+           
+          break;     
+     
+  case 'c':printf("The alphabet is c");
+   
+          break;
+           
+   case 'z':printf("The alphabet is z");
+      
+       break;
+            
+ default :printf("The alphabet is invalid");
+ 
+  }
+}
+
+
+2.number is odd or even
+#include<stdio.h>
+
+
+int main()
+ {
+   
+int a;
+    
+  scanf("%d",&a);
+
+   if(a%2==0)
+ 
+  {
+     
+  printf("it is even number");
+  
+ }
+  
+ else
+ 
+   {
+  
+    
+ printf("it is odd number");
+  
+ }
+ 
+  
+}
+
+
+3.#include<stdio.h>
+
+
+int main() 
+{
+ 
+  int a;
+
+      scanf("%d",&a);
+   
+while(a<9)
+  
+ {
+      
+    
+   a++;
+     
+  printf("%d",a);
+ 
+  }
+  
+ 
+}
+
+
+4.#include<stdio.h>
+
+
+int main()
+ {
+ 
+  int a;
+   
+   scanf("%d",&a);
+  
+do
+   
+{
+   
+   
+       a++;
+    
+
+   printf("%d",a);
+ 
+  }while((a<9));
+ 
+  
+}
+
+=============================================================
+1.for loop,while loop,do while loop
+
+#include<stdio.h>
+
+
+int main() 
+{
+   
+    int n=4,i,j;
+
+    printf("enter number of rows\n");
+    
+    scanf("%d",&n);
+    
+    for(i=1;i<=n;i++)
+    
+        {
+        
+          for(j=1;j<=n;j++)
+        
+              {
+        
+                printf("*");
+     
+              }
+       
+          printf("\n");
+    
+        }
+
+}
+
+
+
+
+
+
+#include<stdio.h>
+
+
+int main() {
+
+    int n=4,i=1,j=1;
+
+    while(i<=n)
+     {
+         printf("");
+         while(j<=n)
+             {
+
+                printf("*");
+
+                 j++;
+
+             }
+
+         printf("\n");
+
+         i++;
+
+     }
+
+}
+
+
+
+
+
+
+#include<stdio.h>
+int main() {
+
+    int n=4,i=1,j=1;
+
+    do{
+
+        printf("");
+
+         do{
+              printf("*");
+
+               j++;
+
+           }
+         while(j<=n);
+
+        printf("\n");
+     
+   i++;
+  
+    }
+
+    while(i<=n);
+
+}
+
+
+
+2.Write C code that will display the calculator menu.
+The program will prompt the user to choose the operation choice (from 1 to 5). Then it asks the user to input two integer vales for the calculation. See the sample below. 
+  MENU 
+          1. Add 
+          2. Subtract 
+          3. Multiply 
+          4. Divide 
+          5. Modulus 
+Enter your choice: 1 
+Enter your two numbers: 12 15 
+Result: 27 
+  
+Continue? y 
+  
+The program also asks the user to decide whether he/she wants to continue the operation. If he/she input ‘y’, the program will prompt the user to choose the operation gain. Instead, the program will terminate. 
+
+
+#include <stdio.h>  	
+#include <stdlib.h>  	
+  	  	   	
+void displaymenu(){  	
+    printf("================================\n");  	
+  	printf("      MENU              	\n");  	
+    printf("================================\n");  	
+  	printf("     1.Add\n");  	
+  	printf("     2.Subtract \n");  	
+  	printf("     3.Multiply \n");  	
+  	printf("     4.Divide \n");  	
+  	printf("     5.Modulus \n");  	
+  	}  	
+  	int Add(int a,int b){  	
+  return(a+b);  
+  	    
+  	}  	
+  	  	   	
+  	int Substract(int a, int b){  	
+  	return(a-b);  	
+  	}  	
+  	  	   	
+  	int Multiply(int a, int b){  	
+  	return(a*b);  	
+  	}  	
+  	float Divide(int a,int b){  	
+  	return(a/b);  	
+    }  	
+  	int Modulus(int a, int b){  	
+  	return(a%b);  	
+    }  	
+  	  	   	
+  int main(int argc, char *argv[])  	
+  {  	
+  //show menu  	
+  displaymenu();  	
+  int yourchoice;  	
+  int a;  	
+  int b;  	
+  char confirm;  	
+  	do  	
+  	  	{  	
+  	  	printf("Enter your choice(1-5):");  	
+  	  	scanf("%d:",&yourchoice);  	
+  	  	printf("Enter your two integer numbers:");  	
+  	  	scanf("%d %d",&a,&b);  	
+  	  	printf("\n");  	
+  	  	switch(yourchoice){  	
+  	  	 case 1:printf("Result:%d",Add(a,b));break;  	
+  	  	 case 2:printf("Result:%d",Substract(a,b));break;  	
+  	  	 case 3:printf("Result:%d",Multiply(a,b));break;  	
+  	  	 case 4:printf("Result:%.2f",Divide(a,b));break;  	
+  	  	 case 5:printf("Result:%d",Modulus(a,b));break;  	
+  	  	 default:printf("invalid");  	
+  	  	     }  	
+  	  	                    	  	
+  	  	printf("\nPress y or Y to continue:");  	
+  	  	scanf("%s",&confirm);  	
+  	  	}while(confirm=='y'||confirm=='Y');  	
+  	  	  system("PAUSE");  	
+  	  	  return EXIT_SUCCESS;  	
+  	}  
+
+
+
+3.#include<stdio.h>
+
+
+int main() {
+   
+     int a,b,c;
+    
+     printf("enter the values of 3 integers\n");
+ 
+     scanf("%d%d%d",&a,&b,&c);
+
+     if((a>b)&&(a>c)){
+
+        printf("a is bigger\n",a);}
+
+     else if(b>c){
+
+        printf("b is bigger\n",b);}
+
+     else{
+
+        printf("c is bigger\n",c);
+
+     }
+ 
+    if((a<b)&&(a<c))
+  
+   {
+        
+        printf("a is smaller",a);}
+
+     else if(b<c){
+
+        printf("b is smaller",b);}
+
+     else{
+
+        printf("c is smaller",c);
+
+     }
+
+}
+
+
+4.#include<stdio.h>
+int main() {
+
+    int y;
+
+    printf("enter the year\n");
+
+    scanf("%d",&y);
+
+    printf("%s",((y%4==0 && y%100!=0) ? "LEAP YEAR" : "NOT A LEAP YEAR"));
+}
+
+5.#include <stdio.h>
+ 
+
+int checkArmstrong(int num){
+    int tempNumber,rem,sum;
+    tempNumber=num;
+ 
+    sum=0;
+    while(tempNumber!=0)
+    {
+        rem=tempNumber%10;
+        sum=sum + (rem*rem*rem);
+        tempNumber/=10;
+    }  
+  if(sum==num)  
+      return 1;
+  else
+      return 0;
+}
+ 
+6.int main()
+{
+    int i,n;
+ 
+    printf("Enter the value of N: \n ");
+    scanf("%d",&n);
+ 
+    printf("All Armstrong numbers from 1 to %d:\n",n);
+    for(i=1;i<=n;i++)
+    {
+        if(checkArmstrong(i))
+            printf("%d,",i);
+    }
+     
+    return 0;
+}
+
+
+
+7.#include <stdio.h>
+ 
+int main()
+{
+   int a , b;
+ 
+   a = 10;
+   printf( "Value of b is %d\n", (a == 1) ? 20: 30 );
+ 
+   printf( "Value of b is %d\n", (a == 10) ? 20: 30 );
+}
