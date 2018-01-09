@@ -1,0 +1,183 @@
+1.arithmetic operation for two integers using pointers
+
+#include<stdio.h>
+
+i
+nt main() {
+  
+ int x,y,*a,*b,c,m,d,diff;
+ 
+  printf("enter x and y");
+   
+scanf("%d %d",&x,&y);
+  
+ a=&x;
+  
+ b=&y;
+  
+ c=*a+*b;
+  
+ m=*a**b;
+  
+ d=*a%*b;
+  
+ diff=*a-*b;
+   
+ printf("\nSum  %d", c);
+    
+printf("\nDifference %d", diff);
+
+printf("\nProduct %d", m);
+
+printf("\nQuotient  %d", d);
+
+}
+    
+
+
+3) C program to swap two numbers using pointers and functions. How to swap two numbers using 
+   call by reference method. Logic to swap two number using pointers in C program.
+
+
+#include<stdio.h>
+#include<conio.h>
+void swap(int *n1,int *n2)
+{
+ int t;
+ t   = *n1;
+ *n1   = *n2;
+ *n2   =  t;
+}
+ 
+int main()
+{
+ int a,b;
+ printf("Enter value of a: ");
+ scanf("%d",&a);
+ printf("Enter value of b: ");
+ scanf("%d",&b);
+ swap(&a,&b);
+ printf("After  Swapping: a=%d, b=%d\n",a,b);    
+ return 0;
+ getch();
+}
+==============================================================================================
+
+
+4)C program to count total number of words in a string using loop. How to find total number of words 
+  in a given string using loops in C programming. 
+
+#include<stdio.h>
+#include<conio.h>
+#define MAX_SIZE 100
+int main()
+{
+ char str[MAX_SIZE];
+ int i, wo;
+ printf("Enter any string: ");
+ gets(str);
+ i = 0;
+ w = 1;
+ while(str[i] != '\0')
+ {
+  if(str[i]==' ' || str[i]=='\n' || str[i]=='\t')
+  {
+   wo++;
+  }
+  i++;
+  }
+  printf("Total number of words = %d", wo);
+  return 0;
+  getch();
+}
+===============================================================================================
+
+
+5)C program to transfer data from one file to another file.
+  
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+ FILE *fptr1, *fptr2;
+ char filename[100], c;
+ printf("Enter the filename to open for reading \n");
+ scanf("%s", filename);
+ fptr1 = fopen(filename, "r");
+ if (fptr1 == NULL)
+ {
+  printf("Cannot open file %s \n", filename);
+  exit(0);
+ }
+ printf("Enter the filename to open for writing \n");
+ scanf("%s", filename);
+ fptr2 = fopen(filename, "w");
+ if (fptr2 == NULL)
+ {
+  printf("Cannot open file %s \n", filename);
+  exit(0);
+ }
+ c = fgetc(fptr1);
+ while (c != EOF)
+ {
+  fputc(c, fptr2);
+  c = fgetc(fptr1);
+ }
+ printf("\nContents copied to %s", filename);
+ fclose(fptr1);
+ fclose(fptr2);
+ return 0;
+ getch();
+}
+
+
+6)C programs for atoi() function,bool,malloc,calloc,free functions.
+
+
+using calloc() and free()
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+ int num, i, *ptr, sum = 0;
+ printf("Enter number of elements: ");
+ scanf("%d", &num);
+ ptr = (int*) calloc(num, sizeof(int));
+ if(ptr == NULL)
+ {
+  printf("Error! memory not allocated.");
+  exit(0);
+ }
+  printf("Enter elements of array: ");
+  for(i = 0; i < num; ++i)
+ {
+  scanf("%d", ptr + i);
+  sum += *(ptr + i);
+ }
+  printf("Sum = %d", sum);
+  free(ptr);
+  return 0;
+ }
+
+using atoi() function
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main () {
+   int val;
+   char str[20];
+   strcpy(str, "98993489");
+   val = atoi(str);
+   printf("String value = %s, Int value = %d\n", str, val);
+   strcpy(str, "tutorialspoint.com");
+   val = atoi(str);
+   printf("String value = %s, Int value = %d\n", str, val);
+   return(0);
+}
+
+
+=============================
